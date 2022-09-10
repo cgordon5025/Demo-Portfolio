@@ -21,8 +21,61 @@ header nav a{
  }
 
  .Top-Image{
-    height: 800px;
+    position: relative;
+    text-align: center;
+ }
+ .Top-Image img{
+    height: 400px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: ("./Assets/Images/background-image.png");
+    background-size: cover;
+    background-position: center;
  }
+
+ .Top-Image h2{
+    color: #ffffff;
+    position: absolute;
+    bottom: 40px;
+    right: 16px;
+ }
+
+ .bio-format{
+    position:relative;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin-left: 20px;
+ }
+ .bio{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 50px;
+ }
+ /*This will be the vertical line between all the Headers and the */
+.Vert-Line{
+    border-right: 5px solid #2c1161;
+    padding: 5px;
+}
+ .bio p{
+    position: relative;
+    left:20px;
+ }
+ .headers {
+    float: left;
+    font-size: 30px;
+ }
+
+.prior-work{
+
+}
+
+.prior-work img{
+    position: relative;
+    text-align: center;
+}
+
+.project-titles{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
