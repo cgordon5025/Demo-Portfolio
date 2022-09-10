@@ -1,0 +1,22 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    padding: 20px;
+    background-color:lightblue;
+}
+
+header h1{
+    display: inline-block;
+}
+header nav {
+    float: right;
+    padding-top: 10px; /*Question: can this be betterr, trying here, but not working*/
+}
+
+
+header nav a{
+    padding:10px;  
+ }
