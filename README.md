@@ -7,7 +7,7 @@ N/A
 
 ## Usage
 
-![mock up of my portfolio](./assets/images/mock-up.png)
+![mock up of my portfolio](./Assets/Images/mock-up.png)
 
 ## Credits
 

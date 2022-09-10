@@ -16,7 +16,13 @@ header nav {
     padding-top: 10px; /*Question: can this be betterr, trying here, but not working*/
 }
 
-
 header nav a{
     padding:10px;  
+ }
+
+ .Top-Image{
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: ("./Assets/Images/background-image.png");
  }
