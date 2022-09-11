@@ -3,6 +3,12 @@
     margin: 0px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+body{
+    background-color: aliceblue;
+}
+figure{
+    display: block;
+}
 header{
     padding: 20px;
     background-color:lightblue;
@@ -13,10 +19,112 @@ header h1{
 }
 header nav {
     float: right;
-    padding-top: 10px; /*Question: can this be betterr, trying here, but not working*/
+    padding-top: 10px; /*Question: can this be better, trying here, but not working*/
+}
+/*TODO I want to have these evenly spaced out, but i am unable to do that, flex is likely involved but it won't work 
+nav bar acting weird?*/ 
+header nav a{
+    padding: 10px;  
+    background-color: #ffffff;
+    text-decoration: none;
+    color: black;
+ }
+ .Top-Image{
+    position: relative;
+    text-align: center;
+ }
+.bg-image{
+    align-content: stretch;
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+ }
+ .Top-Image h2{
+    color: #ffffff;
+    position: absolute;
+    bottom: 40px;
+    right: 16px;
+ }
+ .Vert-Line{
+    border-right: 5px solid #2c1161;
+    padding: 5px;
+}
+/* How can I make this flush? There is a small area, this is a nit pick*/
+ .bio-format{
+    position:relative;
+    text-align: center;
+    width: 99%;
+    display: inline-block;
+    border: 9px solid #2c1161;
+    background-color: lightblue;
+    margin-bottom: 20px;
+ }
+ .bio{
+    display: flex;
+    padding: 10px;
+ }
+ .bio figure{ 
+    display: inline;
+    max-width: 8%;
+ }
+ .bio img{
+    width: 100%;
+ }
+ /*This will be the vertical line between all the Headers and the */
+
+ .bio p{
+    max-width: 80%;
+    padding: 1%;
+ }
+ .headers {
+    float: left;
+    font-size: 30px;
+    align-self: center;
+    padding-right: 15px;
+ }
+
+ .work-format{
+    display: inline-block;
+ }
+.prior-work{
+    max-width: 80%;
+    padding-left: 15px;
 }
 
+.prior-work img{
+    display: flex;
+    align-content: center;
+}
 
-header nav a{
-    padding:10px;  
- }
+.project-titles{
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+}
+
+.prior-work{
+    position: relative;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+#prework figure{
+    max-height: 50%;
+    max-width: auto;
+}
+
+#prework img{
+    max-width: 25%;
+    object-fit: contain;
+}
+
+.smaller-projects .other-work{
+    display: inline;
+}
+.smaller-projects img{
+    max-width: 25%;
+}
+
+/*#b0a4b8; use this color for the outlines?*/
