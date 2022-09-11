@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./Assets/css/style.css">
     <title>Charlee's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -17,15 +18,6 @@
             <a href="#Contact-Me">Contact Me</a>
         </nav>
     </header>
-    <section class="Top-Image">
-
-        <figure>
-            <img class="bg-image" src="./Assets/Images/background-image.png" alt="purple and blue geometric design">
-        </figure>
-        <section>
-            <h2>Cool Subtitle Here</h2>
-        </section>
-    </section>
     <section class="bio-format" id="About-Me">
         <section class="bio">
             <figure>
@@ -48,41 +40,39 @@
     <!-- Here I will talk/show the work I've done previously, each card will link to my git repo with previously done work-->
     <section class="work-format" id="Work">
         <h2 class="headers">Work</h2>
-        <div class="Vert-Line"></div>
-        <section class="prior-work">
-            <!-- This one since it's the first will be 2x larger than the rest, that is why it has a separate id tag, to be able to manipulate that-->
-            <article id="prework">
-                <!--<h3 class="project-titles">Prework Study Guide</h3>-->
-                <a href="https://cgordon5025.github.io/prework-study-guide">
-                    <figure>
+        <div class="Vert-Line2"></div>  
+            <!-- This one since it's the first will be 2x larger than the rest, that is why it has a separate id tag, to be able to manipulate that
+            <article id="prework">-->
+            <!--<h3 class="project-titles">Prework Study Guide</h3>-->
+            <section class="prior-work">
+                   
+                <a href="https://cgordon5025.github.io/prework-study-guide" class="links">
+                    <figure id="prework">
                         <img src="./Assets/Images/studying.png" alt="hands typing on a laptop">
                     </figure>
+                    <h3 class="project-titles"> Prework Study Guide</h3>
                 </a>
-                <h3 class="project-titles"> Prework Study Guide</h3>
-            </article>
-            <div class="smaller-projects">
-                <article class="other-work">
-                    <a href="https://cgordon5025.github.io/test">
-                        <figure>
-                            <img src="./Assets/Images/Tom-Nook.png" alt="Image of Tom Nook">
-                        </figure>
-                    </a>
-                    <h3 class="project-titles">Animal Crossing Character Generator</h3>
-                </article>
-                <article class="other-work">
-                    <a href="https://cgordon5025.github.io/some-link">
-                        <figure>
-                            <img src="./Assets/Images/Tom-Nook.png" alt="some image">
-                        </figure>
-                    </a>
-                    <h3 class="project-titles">One More Application to be made</h3>
-                </article>
-            </div>
-        </section>
+                <section class="other-work">
+                    <!-- <a href="https://cgordon5025.github.io/test">-->
+                    <figure>
+                        <img src="./Assets/Images/Tom-Nook.png" alt="Image of Tom Nook">
+                    </figure>
+                    <h3 class="project-titles" >Animal Crossing Character's</h3>
+                    <!--</a>
+            <a href="https://cgordon5025.github.io/some-link">-->
+                    <figure>
+                        <img src="./Assets/Images/Tom-Nook.png" alt="some image">
+                    </figure>
+                    <h3 class="project-titles">TBA</h3>
+                    <!-- </a>-->
+                </section>
+    </section>
+
+
     </section>
     <section>
         <section class="contact-me-format">
-            <h2 class="headers" id="Contact-Me"> Contact Me</h2>
+            <h2 class="headers" id="Contact-Me">Contact Me</h2>
             <div class="Vert-Line"></div>
             <!-- These Are the contact information, I want these to be evenly spaced within it's element-->
             <section class="Contact-Info">
