@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html  lang="en-us">
-<head> 
-    <meta charset="UTF-8"/>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="./Assets/css/style.css">
     <title>Charlee's Portfolio</title>
 </head>
 
 <body>
-        <header>
-          <h1> Charlee Gordon</h1>
-          <!-- Links to About Me, Work, and Contact me-->
-          <nav>
+    <header>
+        <h1> Charlee Gordon</h1>
+        <!-- Links to About Me, Work, and Contact me-->
+        <nav>
             <a href="#About-Me">About Me</a>
             <a href="#Work">Work</a>
             <a href="#Contact-Me">Contact Me</a>
-          </nav>  
-        </header>
+        </nav>
+    </header>
     <section class="Top-Image">
+
         <figure>
-            <img src="./Assets/Images/background-image.png" alt="purple and blue geometric design">
+            <img class="bg-image" src="./Assets/Images/background-image.png" alt="purple and blue geometric design">
         </figure>
         <section>
             <h2>Cool Subtitle Here</h2>
@@ -26,55 +28,70 @@
     </section>
     <section class="bio-format" id="About-Me">
         <section class="bio">
+            <figure>
+                <img src="./Assets/Images/bio-image.png" alt="photo of Charlee Gordon">
+            </figure>
             <h2 class="headers">About Me</h2>
+
             <div class="Vert-Line"></div>
-            <p>Paragraph About Me!</p>
+            <p> Charlee was adopted from Hangzhou, China when she was 10 months old. She grew up in Lynbrook, New York.
+                She graduated from Brandeis University Cum Laude with a B.A. in Psychology and Music. She gained some
+                experience in Python by working in the Neurochemistry and Cognition Lab at Brandeis University. There
+                she developed the group's behavioral tests using PsychoPy; these tests were both used in-person and
+                pushed online thorugh GitHub and Pavlovia. After leaving the lab, she enrolled as a full time student in
+                The Georgia Institute of Technology's Full Stack Coding BootCamp to further her skills.
+                In her spare time she enjoys experimenting in the kitchen and playing the flute. While she works, she
+                listens to Animal Crossing Music to get her through the day.
+            </p>
         </section>
-        </section>
-
-        <br>
-        <br>
-
+    </section>
     <!-- Here I will talk/show the work I've done previously, each card will link to my git repo with previously done work-->
-    <section class="prior-work" id="Work">
+    <section class="work-format" id="Work">
         <h2 class="headers">Work</h2>
-            <div class="Vert-Line"></div>
-        <!-- This one since it's the first will be 2x larger than the rest, that is why it has a separate id tag, to be able to manipulate that-->
-        <section id="prework">
-            <h3 class="project-titles">Prework Study Guide</h3>
+        <div class="Vert-Line"></div>
+        <section class="prior-work">
+            <!-- This one since it's the first will be 2x larger than the rest, that is why it has a separate id tag, to be able to manipulate that-->
+            <article id="prework">
+                <!--<h3 class="project-titles">Prework Study Guide</h3>-->
                 <a href="https://cgordon5025.github.io/prework-study-guide">
                     <figure>
-                        <img src="some image" alt="some image">
+                        <img src="./Assets/Images/studying.png" alt="hands typing on a laptop">
                     </figure>
                 </a>
-        </section>
-        <section>
-            <h3 class="project-titles">Animal Crossing Character Generator</h3>
-                <a href="https://cgordon5025.github.io/test">
-                    <figure>
-                        <img src="some image" alt="some image">
-                    </figure>
-                </a>
-        </section>
-        <section>
-            <h3 class="project-titles">One more Application to be made</h3>
-            <a href="https://cgordon5025.github.io/some-link">
-                <figure>
-                    <img src="some image" alt="some image">
-                </figure>
-            </a>
+                <h3 class="project-titles"> Prework Study Guide</h3>
+            </article>
+            <div class="smaller-projects">
+                <article class="other-work">
+                    <a href="https://cgordon5025.github.io/test">
+                        <figure>
+                            <img src="./Assets/Images/Tom-Nook.png" alt="Image of Tom Nook">
+                        </figure>
+                    </a>
+                    <h3 class="project-titles">Animal Crossing Character Generator</h3>
+                </article>
+                <article class="other-work">
+                    <a href="https://cgordon5025.github.io/some-link">
+                        <figure>
+                            <img src="./Assets/Images/Tom-Nook.png" alt="some image">
+                        </figure>
+                    </a>
+                    <h3 class="project-titles">One More Application to be made</h3>
+                </article>
+            </div>
         </section>
     </section>
     <section>
-        <h2 class="headers" id="Contact-Me"> Contact Me</h2>
+        <section class="contact-me-format">
+            <h2 class="headers" id="Contact-Me"> Contact Me</h2>
             <div class="Vert-Line"></div>
-        <!-- These Are the contact information, I want these to be evenly spaced within it's element-->
+            <!-- These Are the contact information, I want these to be evenly spaced within it's element-->
             <section class="Contact-Info">
                 <a href=tel:123-456-7890>123-456-7890</a>
                 <a href="mailto: cgordon5025@gmail.com"> Email Me</a>
                 <a href="https://github.com/cgordon5025">GitHub</a>
             </section>
-    </section>
+        </section>
     </section>
 </body>
+
 </html>
