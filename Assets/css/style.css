@@ -1,184 +1,176 @@
 /* how can i make all of my positioning attributes better?*/
 
-*{
+* {
     padding: 0px;
     margin: 0px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: aliceblue;
 }
-header{
-    height:250px;
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
     background-image: url("../Images/background-image.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-header h1{
-    display:inline;
-    position: fixed;
-    top: 115px;
-    margin: 15px;
+header h1 {
+    align-self: center;
     color: white;
+}
 
-}
 header nav {
-    float: right;
-    padding-top: 10px; /*Question: can this be better, trying here, but not working*/
-    width: 500px;
-    position: relative;
-    top: 125px;
+    padding: 5px;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: flex-end;
 }
+
 /*TODO I want to have these evenly spaced out, but i am unable to do that, flex is likely involved but it won't work 
-nav bar acting weird?*/ 
-header nav a{
-    padding: 10px;  
+nav bar acting weird?*/
+header nav a {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
     background-color: #ffffff;
     text-decoration: none;
     color: black;
- }
-  /*This will be the vertical line between all the Headers and the */
+}
 
- .Vert-Line{
-    float: left;
-    border-right: 5px solid #2c1161;
-    padding: 5px;
-}
-.work-format .headers{
-    position:relative;
-    left: 175px;
-}
-.contact-me-format .headers{
-    position: relative;
-    left: 160px;
-}
-.Vert-Line2{
-    float: left;
-    border-right: 5px solid #2c1161;
-    padding: 5px;
-    position: relative;
-    left:205px;
-    height: 800px;
-}
-/* How can I make this flush? There is a small area, this is a nit pick*/
- .bio-format{
-    position:relative;
-    text-align: center;
+.bio-format {
+    display: flex;
     width: 100%;
-    display: inline-block;
     border: 9px solid #2c1161;
     background-color: lightblue;
     margin-bottom: 20px;
- }
- .bio{
+}
+
+.bio {
     display: flex;
     padding: 10px;
- }
- .bio figure{ 
-    display: inline;
-    max-width: 8%;
- }
- .bio img{
-    width: 100%;
- }
+}
 
- .bio p{
+.bio figure {
+    display: flex;
+}
+
+.bio img {
+    max-width: 100%;
+    align-self: center;
+}
+
+.bio h2 {
+    text-decoration: underline 5px solid #2c1161;
+}
+
+.bio p {
     max-width: 80%;
     padding: 1%;
- }
- .headers {
-    float: left;
+    justify-content: flex-end;
+}
+
+.headers {
     font-size: 30px;
     align-self: center;
-    padding-right: 15px;
- }
-
- .work-format{
-    display: inline-block;
-    height:50%;
- }
-.project-titles{
-   background-color: lightblue;
-   padding: 15px;
-   max-width: fit-content;
 }
 
-.prior-work{
-    max-width: 80%;
-    float: right;
-    background-color:crimson;
-    display: inline;
+.project-titles {
+    background-color: lightblue;
+    padding: 15px;
+    max-width: fit-content;
+    text-decoration: none;
+    color: black;
+    max-width: fit-content;
 }
 
-#prework{
-    display: block;
-    align-content: center;
-    max-width: 50%;
+.work-format {
+    display: flex;
+    width: 100%;
 }
-#prework img{
+
+.prior-work {
+    border-left: 5px solid lightblue;
+    /*fix color later*/
+    padding-left: 10px;
+}
+
+#prework {
     position: relative;
-    left: 50%;
+    text-align: center;
+}
+
+#prework img {
+    flex: 1 0 0;
     max-width: 100%;
     border: 9px solid #2c1161;
 }
-.prior-work h3{
-    text-decoration: none;
-    color: black;
-    text-decoration-line: none;
-    max-width: fit-content;
-}
-.links h3{
-    position:relative;
-    left: 28%;
-    bottom: 70px;
 
-}
-
-.other-work figure{
-    display:inline;
-    max-width: 25%;
-    position: relative;
-    left: 200px;
-}
-.other-work img{
-    max-width: 25%;
-    display: inline;
-}
-.other-work .project-titles{
-    display: inline;
-    position: relative;
-    left:-120px;
-    bottom: 15px;
+#prework h3 {
+    position: absolute;
+    bottom: 12px;
+    left: 10.5px;
     font-size: 15px;
 }
-.contact-me-format{
-    display: block;
+
+.small-class {
+    display: flex;
+}
+
+.other-work {
+    position: relative;
+    text-align: center;
+}
+
+.other-work figure {
+    padding: 4px;
+}
+
+.other-work img {
+    max-width: 100%;
+    border: 9px solid #2c1161;
+
+}
+
+.other-work .project-titles {
+    font-size: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
     background-image: url("../Images/background-image.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
+    height: 100px;
 }
-.Contact-Info{
-    display: flex;
-    justify-content: space-around; 
+
+footer .Contact-Info {
+    justify-content: center;
+    align-self: center;
+    padding-top: 10px;
 }
-.Contact-Info a{
+
+footer .Contact-Info a {
+    justify-content: space-around;
     text-decoration: none;
     color: black;
     background-color: lightblue;
     padding: 10px;
     border: 9px solid #2c1161;
+    font-size: 10px;
 }
-#Contact-Me {
-    color: white;
-    position: relative;
-    top: 10px;
-}
-/*#b0a4b8; use this color for the outlines?*/
-
-@media screen (max-width 768px) {
-    .
+@media screen and (min-width: 768px) {
+    font-size: 25px
 }
