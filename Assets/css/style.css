@@ -1,130 +1,176 @@
-*{
+/* how can i make all of my positioning attributes better?*/
+
+* {
     padding: 0px;
     margin: 0px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-body{
-    background-color: aliceblue;
-}
-figure{
-    display: block;
-}
-header{
-    padding: 20px;
-    background-color:lightblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
 }
 
-header h1{
-    display: inline-block;
+body {
+    background-color: aliceblue;
 }
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+    background-image: url("../Images/background-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h1 {
+    align-self: center;
+    color: white;
+}
+
 header nav {
-    float: right;
-    padding-top: 10px; /*Question: can this be better, trying here, but not working*/
+    padding: 5px;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: flex-end;
 }
+
 /*TODO I want to have these evenly spaced out, but i am unable to do that, flex is likely involved but it won't work 
-nav bar acting weird?*/ 
-header nav a{
-    padding: 10px;  
+nav bar acting weird?*/
+header nav a {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
     background-color: #ffffff;
     text-decoration: none;
     color: black;
- }
- .Top-Image{
-    position: relative;
-    text-align: center;
- }
-.bg-image{
-    align-content: stretch;
-    height: 400px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
- }
- .Top-Image h2{
-    color: #ffffff;
-    position: absolute;
-    bottom: 40px;
-    right: 16px;
- }
- .Vert-Line{
-    border-right: 5px solid #2c1161;
-    padding: 5px;
 }
-/* How can I make this flush? There is a small area, this is a nit pick*/
- .bio-format{
-    position:relative;
-    text-align: center;
-    width: 99%;
-    display: inline-block;
+
+.bio-format {
+    display: flex;
+    width: 100%;
     border: 9px solid #2c1161;
     background-color: lightblue;
     margin-bottom: 20px;
- }
- .bio{
+}
+
+.bio {
     display: flex;
     padding: 10px;
- }
- .bio figure{ 
-    display: inline;
-    max-width: 8%;
- }
- .bio img{
-    width: 100%;
- }
- /*This will be the vertical line between all the Headers and the */
+}
 
- .bio p{
+.bio figure {
+    display: flex;
+}
+
+.bio img {
+    max-width: 100%;
+    align-self: center;
+}
+
+.bio h2 {
+    text-decoration: underline 5px solid #2c1161;
+}
+
+.bio p {
     max-width: 80%;
     padding: 1%;
- }
- .headers {
-    float: left;
+    justify-content: flex-end;
+}
+
+.headers {
     font-size: 30px;
     align-self: center;
-    padding-right: 15px;
- }
-
- .work-format{
-    display: inline-block;
- }
-.prior-work{
-    max-width: 80%;
-    padding-left: 15px;
 }
 
-.prior-work img{
+.project-titles {
+    background-color: lightblue;
+    padding: 15px;
+    max-width: fit-content;
+    text-decoration: none;
+    color: black;
+    max-width: fit-content;
+}
+
+.work-format {
     display: flex;
-    align-content: center;
+    width: 100%;
 }
 
-.project-titles{
+.prior-work {
+    border-left: 5px solid lightblue;
+    /*fix color later*/
+    padding-left: 10px;
+}
+
+#prework {
     position: relative;
+    text-align: center;
+}
+
+#prework img {
+    flex: 1 0 0;
+    max-width: 100%;
+    border: 9px solid #2c1161;
+}
+
+#prework h3 {
+    position: absolute;
+    bottom: 12px;
+    left: 10.5px;
+    font-size: 15px;
+}
+
+.small-class {
+    display: flex;
+}
+
+.other-work {
+    position: relative;
+    text-align: center;
+}
+
+.other-work figure {
+    padding: 4px;
+}
+
+.other-work img {
+    max-width: 100%;
+    border: 9px solid #2c1161;
+
+}
+
+.other-work .project-titles {
+    font-size: 10px;
+    position: absolute;
     bottom: 10px;
     left: 10px;
 }
-
-.prior-work{
-    position: relative;
-    left: 20px;
-    width: 100%;
-    height: 100%;
+footer {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../Images/background-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100px;
 }
 
-#prework figure{
-    max-height: 50%;
-    max-width: auto;
+footer .Contact-Info {
+    justify-content: center;
+    align-self: center;
+    padding-top: 10px;
 }
 
-#prework img{
-    max-width: 25%;
-    object-fit: contain;
+footer .Contact-Info a {
+    justify-content: space-around;
+    text-decoration: none;
+    color: black;
+    background-color: lightblue;
+    padding: 10px;
+    border: 9px solid #2c1161;
+    font-size: 10px;
 }
-
-.smaller-projects .other-work{
-    display: inline;
+@media screen and (min-width: 768px) {
+    font-size: 25px
 }
-.smaller-projects img{
-    max-width: 25%;
-}
-
-/*#b0a4b8; use this color for the outlines?*/
