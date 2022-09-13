@@ -139,19 +139,21 @@ nav a {
 .small-class {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    
 }
 
 .other-work {
-    flex: 0 1 300;
+    flex: 1 1 300px;
     position: relative;
     text-align: center;
+    width: fit-content;
 }
 
 .other-work figure {
-    flex: 0 3 300;
+    max-width: 100%;
+    position: relative;
     padding: 3px;
-    display: flex;
 }
 
 
@@ -160,4 +162,12 @@ nav a {
     position: absolute;
     bottom: 12px;
     left: 12px;
+}
+
+@media screen and (max-width:599){
+    .small-class,
+    .other-work{
+        width: 25%;
+    }
+
 }
