@@ -26,7 +26,6 @@ footer {
     width: 100%;
     background-image: url("../Images/background-image.png");
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -55,22 +54,23 @@ nav {
 I have a min font size and i want it to change based off the viewport width*/
 nav a {
     font-size: calc(7px + 1.5vw);
-    flex-wrap: wrap;
     padding: 10px;
     background-color: var(--blue-box);
     border: 9px solid var(--border-color);
     text-decoration: none;
     color: var(--dark-font);
 }
-
+/*Here i want to headers to all have the same appearance, to be centered in their sections
+to be black in color and */
 .headers {
-    text-decoration: underline 5px solid #2c1161;
-    justify-content: center;
+    text-decoration: underline 5px solid var(--border-color);
     display: flex;
     justify-content: center;
     font-size: calc(15px + 2vh);
+    padding-bottom: 1vh;
+    color: var(--dark-font);
 }
-
+/*formatting the bio*/
 .bio-format {
     margin-top: 1px;
     display: flex;
@@ -80,21 +80,21 @@ nav a {
     margin-bottom: 10px;
 }
 
-/*Must next display flex's here*/
+/*give the bio section some padding*/
 .bio {
     display: flex;
     padding: 10px;
 }
-
+/*put the figure container in flex*/
 .bio figure {
     display: flex;
 }
-
+/*Image width will take up 100% of the figure container and also it will be in the center, vertically*/
 .bio img {
     max-width: 100%;
     align-self: center;
 }
-
+/*give the text of th ebio a little padding, and let the font size adjust based on the window size*/
 .bio p {
     max-width: 100%;
     padding: 1%;
@@ -105,69 +105,75 @@ nav a {
 /*All Project titles are going to have the same format*/
 .project-titles {
     background-color: var(--border-color);
-    padding: 15px;
     max-width: fit-content;
     text-decoration: none;
     color:var(--light-font);
     max-width: fit-content;
 }
-
+/*Formatting the work section*/
 .work-format {
     display: flex;
     width: 100%;
 }
-
-.prior-work {
-    padding-top: 1vh;
-}
-
+/*The image will take up all of the width of the page, and have the same border everything else has*/
 .prior-work img{
     max-width: 100%;
     border: 9px solid var(--border-color);
 }
-
+/*Establish the position is relative so the absolute placement of the text is possible*/
 #prework {
     position: relative;
 }
+/*We specifically want the font here to be larger, so it adjusts to the larger image*/
 #prework h3 {
+    padding: 15px;
+
     position: absolute;
-    bottom: 12px;
+    bottom: 10px;
     left: 10px;
     font-size: calc(12px + 1.5vh);
 }
-
+/*We want everyhting in this large container to be in flex display and to be spaced evenly*/
 .small-class {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     
 }
-
+/*Setting the flex shrink and basis here
+other work in the container for the images*/
 .other-work {
-    flex: 1 1 300px;
+    flex: 1 1 25%;
     position: relative;
     text-align: center;
     width: fit-content;
 }
-
+/*Lets give the allow the figure to take up all the space in the otherwork section
+and give it some padding, so that there is so space between them*/
 .other-work figure {
     max-width: 100%;
-    position: relative;
     padding: 3px;
 }
 
-
+/*Here I am calculating the size of the font, to adapt based off the screen width
+it is also placing the text relative to where the images is, so it will always be in the bottom left corner*/
 .other-work .project-titles {
-    font-size: calc(10px + 1vh);
+    font-size: calc(8px + 1vw);
+    /*font-size: calc(10px + 1vh);*/
     position: absolute;
     bottom: 12px;
     left: 12px;
+    padding: 0.5vw;
+}
+/*Adding some media queries so that The heading and footer are not too big*/
+@media screen and (max-width: 1000px){
+    header,
+    footer{height: 12vh};
 }
 
-@media screen and (max-width:599){
-    .small-class,
-    .other-work{
-        width: 25%;
+@media screen and (max-width:500px){
+    header,
+    footer{height:10vh};
+    .other-work .project-titles{
+        padding: 1px;
     }
-
 }
