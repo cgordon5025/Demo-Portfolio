@@ -8,6 +8,8 @@ N/A
 
 ## Usage
 Due to the page missing a JavaScript, it is mostly cosemetic. The navigation bar at the top does function and bring you to the appropriate sections, and the contact information does function as well.
+
+For now all links for the icons labelled TBA will lead to the same Animal Crossing Project. As I continue making pages, I will update this
 ![mock up of my portfolio](./Assets/Images/mock-up.png)
 
 ## Credits
