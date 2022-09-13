@@ -18,4 +18,4 @@ W3Schools https://www.w3schools.com/
 N/A
 
 ## Link to Application
-[Link to Application](https:cgordon5025.github.io/Demo-Portfolio)
+[Link to Application](https:cgordon5025.github.io/Demo-Portfolio/)
