@@ -1,5 +1,14 @@
-/* how can i make all of my positioning attributes better?*/
+/*Here I am establishing variables for colors I use very often, int he case i change the color I don't have to go back and 
+adjust all instances of it, I just have to edit it here*/
+:root {
+    --border-color: #2c1161;
+    --light-font: #fff;
+    --dark-font: black;
+    --blue-box: lightblue;
+}
 
+/*Wildcard, states that everything will have no padding/margins (unless specified)
+the font family, and that it is a border box sizing, i.e. the border is included in an images height/width*/
 * {
     padding: 0px;
     margin: 0px;
@@ -7,14 +16,13 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: aliceblue;
-}
-
-header {
+/*Here I establish that the header will be in flex and that the elements within it will be in columns
+the background image is also estblihed*/
+header,
+footer {
     display: flex;
     flex-direction: column;
-    height: 100px;
+    height: 20vh;
     width: 100%;
     background-image: url("../Images/background-image.png");
     background-position: center;
@@ -22,37 +30,57 @@ header {
     background-size: cover;
 }
 
-header h1 {
-    align-self: center;
-    color: white;
+/*Here we are stating that the background is a certain color*/
+body {
+    background-color: aliceblue;
 }
 
-header nav {
-    padding: 5px;
+/*All h1 headings will be aligned in the center of their respective field,
+be white in color and the font size will change to always be 3% of the total height*/
+h1 {
+    align-self: center;
+    color: var(--light-font);
+    font-size: calc(20px + 3vw);
+}
+
+/*The nav bar will wrap incase of overflow, and establishing padding */
+nav {
+    margin-top: 2vh;
+    padding: .2vh;
     flex-wrap: wrap;
     align-self: center;
-    justify-content: flex-end;
 }
 
-/*TODO I want to have these evenly spaced out, but i am unable to do that, flex is likely involved but it won't work 
-nav bar acting weird?*/
-header nav a {
-    justify-content: space-around;
+/*Establish that I want it to wrap when it overflows, the colors, the decoration etc.
+I have a min font size and i want it to change based off the viewport width*/
+nav a {
+    font-size: calc(7px + 1.5vw);
     flex-wrap: wrap;
     padding: 10px;
-    background-color: #ffffff;
+    background-color: var(--blue-box);
+    border: 9px solid var(--border-color);
     text-decoration: none;
-    color: black;
+    color: var(--dark-font);
+}
+
+.headers {
+    text-decoration: underline 5px solid #2c1161;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    font-size: calc(15px + 2vh);
 }
 
 .bio-format {
+    margin-top: 1px;
     display: flex;
     width: 100%;
-    border: 9px solid #2c1161;
-    background-color: lightblue;
-    margin-bottom: 20px;
+    border: 9px solid var(--border-color);
+    background-color: var(--blue-box);
+    margin-bottom: 10px;
 }
 
+/*Must next display flex's here*/
 .bio {
     display: flex;
     padding: 10px;
@@ -67,27 +95,20 @@ header nav a {
     align-self: center;
 }
 
-.bio h2 {
-    text-decoration: underline 5px solid #2c1161;
-}
-
 .bio p {
-    max-width: 80%;
+    max-width: 100%;
     padding: 1%;
-    justify-content: flex-end;
+    justify-content: center;
+    font-size: calc(9px + 1vw);
 }
 
-.headers {
-    font-size: 30px;
-    align-self: center;
-}
-
+/*All Project titles are going to have the same format*/
 .project-titles {
-    background-color: lightblue;
+    background-color: var(--border-color);
     padding: 15px;
     max-width: fit-content;
     text-decoration: none;
-    color: black;
+    color:var(--light-font);
     max-width: fit-content;
 }
 
@@ -97,80 +118,46 @@ header nav a {
 }
 
 .prior-work {
-    border-left: 5px solid lightblue;
-    /*fix color later*/
-    padding-left: 10px;
+    padding-top: 1vh;
+}
+
+.prior-work img{
+    max-width: 100%;
+    border: 9px solid var(--border-color);
 }
 
 #prework {
     position: relative;
-    text-align: center;
 }
-
-#prework img {
-    flex: 1 0 0;
-    max-width: 100%;
-    border: 9px solid #2c1161;
-}
-
 #prework h3 {
     position: absolute;
     bottom: 12px;
-    left: 10.5px;
-    font-size: 15px;
+    left: 10px;
+    font-size: calc(12px + 1.5vh);
 }
 
 .small-class {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .other-work {
+    flex: 0 1 300;
     position: relative;
     text-align: center;
 }
 
 .other-work figure {
-    padding: 4px;
+    flex: 0 3 300;
+    padding: 3px;
+    display: flex;
 }
 
-.other-work img {
-    max-width: 100%;
-    border: 9px solid #2c1161;
-
-}
 
 .other-work .project-titles {
-    font-size: 10px;
+    font-size: calc(10px + 1vh);
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-}
-footer {
-    display: flex;
-    flex-direction: column;
-    background-image: url("../Images/background-image.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    height: 100px;
-}
-
-footer .Contact-Info {
-    justify-content: center;
-    align-self: center;
-    padding-top: 10px;
-}
-
-footer .Contact-Info a {
-    justify-content: space-around;
-    text-decoration: none;
-    color: black;
-    background-color: lightblue;
-    padding: 10px;
-    border: 9px solid #2c1161;
-    font-size: 10px;
-}
-@media screen and (min-width: 768px) {
-    font-size: 25px
+    bottom: 12px;
+    left: 12px;
 }
